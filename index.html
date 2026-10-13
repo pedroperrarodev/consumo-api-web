@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IPTU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <container>
+            <h1>Cálculo de IPTU</h1>
+
+            <form id="form">
+                <input id="cep" placeholder="CEP (somente números)" maxlength="8" required>
+                <input id="valor" type="number" placeholder="Valor do imóvel (R$)" min="0" step="any" required>
+                <button type="submit">Calcular</button>
+            </form>
+
+            <p id="resultado"></p>
+        </container>
+        <container>
+            <h1>Cálculo de IPVA</h1>
+
+            <form id="ipva-form">
+                <select id="ipva-marca" required>
+                    <option value="">Marca</option>
+                </select>
+                <select id="ipva-modelo" required disabled>
+                    <option value="">Modelo</option>
+                </select>
+                <select id="ipva-ano" required disabled>
+                    <option value="">Ano</option>
+                </select>
+                <input id="ipva-cep" placeholder="CEP do proprietário (somente números)" maxlength="8" required>
+                <button type="submit">Calcular</button>
+            </form>
+
+            <p id="ipva-resultado"></p>
+        </container>
+
+    </main>
+
+    <script src="cep-script.js"></script>
+    <script src="ipva-script.js"></script>
+</body>
+</html>
